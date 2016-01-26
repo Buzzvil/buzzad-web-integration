@@ -1,5 +1,5 @@
 # BuzzAd 웹 연동 가이드 v3.2
-![CPA integration](Buzzad CPA integration.jpg)
+![CPA integration](Buzzad CPA integration.png)
 
 ## 1. Javascript 연동
  광고를 통해 랜딩 시, BuzzAd 서버에서는 현재 랜딩 신호를 통해 유저가 액션 완료에까지 도달하는지 여부를 파악하기 위해 ‘bz_tracking_id’를 파라미터로 붙여서 전달한다. 이를 유저의 웹브라우저에서 광고주 도메인에 속하는 localStorage에 저장하고, 액션 완료 시 BuzzAd 서버로 신호를 보낼 때 이 ‘bz_tracking_id’를 다시 꺼내서 같이 전달한다. 이 파라미터를 통해 BuzzAd 서버에 액션 달성 전송 신호가 도달할 때 이것이 광고를 통한 액션인지 아닌지를 구별할 수 있다.
@@ -7,7 +7,7 @@
 랜딩 페이지와 액션 완료 페이지의 도메인은 동일해야 한다.
 
 ### Step1 : 초기화
-BuzzAd를 통해 랜딩되는 광고주의 첫 페이지에서 아래의 자바스크립트 코드를 호출한다.‘bz_tracking_id’ 라는 파라미터가 현재 url의 검색 쿼리 부분에 있다면 이를 localStorage 에 BuzzAd 라는 이름으로 저장한다.
+BuzzAd를 통해 랜딩되는 광고주의 첫 페이지에서 아래의 자바스크립트 코드를 호출한다. ‘bz_tracking_id’ 라는 파라미터가 현재 url의 검색 쿼리 부분에 있다면 이를 localStorage 에 BuzzAd 라는 이름으로 저장한다.
 
 ```javascript
 <script>
@@ -25,7 +25,7 @@ BuzzAd를 통해 랜딩되는 광고주의 첫 페이지에서 아래의 자바�
     //*필요시 여기서 리다이렉트 수행*
 };
 if (localStorage.BuzzAd == null) { localStorage.BuzzAd = ""; }
-img.src = "//t.buzzad.io/action/pb/cpa/default/pixel.gif" + localStorage.zzBuzzAd; }) (new Image())
+img.src = "//t.buzzad.io/action/pb/cpa/default/pixel.gif" + localStorage.BuzzAd; }) (new Image())
 </script>
 ```
  
@@ -35,14 +35,15 @@ img.src = "//t.buzzad.io/action/pb/cpa/default/pixel.gif" + localStorage.zzBuzzA
 ## 2. Javascript integration test
 ##### 주의사항
 웹 브라우저로 Chrome을 사용해야 테스트가 가능하다.
-### (1) 첨부된 Chrome extension 설치
-1. 링크된 [CPAtest.zip](CPAtest.zip)을 다운로드하고, 압축을 푼다.
-2. Chrome 브라우져에서 chrome://extensions 를 로드한다.
-3. 오른쪽 위의 '개발자 모드' 체크박스를 체크한다.
-4. '압축해제된 확장 프로그램 로드'를 눌러, 1.에서 압축을 푼 'CPAtest' 디렉토리를 선택한다.
-5. 다음과 같이 테스트용 버튼이 브라우져에 추가된다.
+### (1) 테스트용 Chrome extension 설치
+1. [Chrome web store 링크](https://chrome.google.com/webstore/detail/buzzad-cpa-test/bocbmmdieplllmldcnececpidlgehdfc)에 접속한다.
+2. 'BuzzAd CPA test' extension이 로드되면 오른쪽 위의 'Chrome에 추가' 버튼을 누른다.
+3. 팝업창이 뜨면 '확장 프로그램 추가' 버튼을 누른다.
+4. 다음과 같이 테스트용 버튼이 브라우져에 추가된다.
 
 ![chrome extension](Chrome_extension.png)
+
+**참고** 'chrome://'으로 시작하는 url(chrome web store)에서는 작동하지 않는다.
 
 ### (2) 테스트용 랜딩 url 생성 후 호출
 테스트용 bz_tracking_id 를 랜딩 url에 붙여서 호출한다.
@@ -82,31 +83,27 @@ POST or GET
  
 3) HTTP Request URL
 
-http://t.buzzad.io/action/pb/cpa/default/
+https://t.buzzad.io/action/pb/cpa/default/
 
 4) HTTP Request parameters
-- Field : `bz_tracking_id`
-- Type : String
-- Description : 광고와 유저 트래킹을 위한 아이디. BuzzAd에서 광고와 연결된 URL로 전환시 같이 전달되는 값이다. 광고 웹 사이트는 이 값을 보관하였다가 액션 달성 API호출 시 다시 전달해주어야 한다.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `bz_tracking_id` | String | 광고와 유저 트래킹을 위한 아이디. BuzzAd에서 광고와 연결된 URL로 전환시 같이 전달되는 값이다. 광고 웹 사이트는 이 값을 보관하였다가 액션 달성 API호출 시 다시 전달해주어야 한다. |
  
 5) Response
 JSON 형식으로 반환
-
-1. 
-	- Field : `code`
-	- Type : Integer
-	- Description : 처리결과 코드 -> 200 : 정상 | 9020 : 중복 요청 | 그 외 : 에러
-
-2. 
-	- Field : `msg`
-	- Type : String
-	- Description : 처리결과 메세지
+		
+| Field | Type | Description |
+| --- | --- | --- |
+| `code` | Integer | 처리결과 코드 - 200 : 정상, 9020 : 중복 요청, 그 외 : 에러 |
+| `msg` | String | 처리결과 메세지 |
  
 6) Test bz_tracking_id
 bz_tracking_id = 10023_71ffbffd-ccf1-4edf-9c4c
  
 eg)
-http://t.buzzad.io/action/pb/cpa/default/?bz_tracking_id=10023_71ffbffd-ccf1-4edf-9c4c
+https://t.buzzad.io/action/pb/cpa/default/?bz_tracking_id=10023_71ffbffd-ccf1-4edf-9c4c
 
 ## 4. 가이드 변경 이력
  
