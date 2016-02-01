@@ -123,4 +123,4 @@ https://t.buzzad.io/action/pb/cpa/default/?bz_tracking_id=10023_71ffbffd-ccf1-4e
 ### (2) 개요
 - 서비스명: BuzzAd
 - 회사명: (주)버즈빌
-- 담당: 서주은 매니저 / <zuneseo@buzzvil.com>
+- 담당: 홍서정 매니저 / <haley.hong@buzzvil.com>
