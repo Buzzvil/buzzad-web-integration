@@ -84,7 +84,7 @@ img.src = "//t.buzzad.io/action/pb/cpa/default/pixel.gif" + localStorage.BuzzAd;
 아래 링크된 페이지에서 `Buzzad integration test` 링크를 북마크로 추가하여 테스트를 진행한다.
 자세한 테스트 진행 방식은 해당 페이지를 참고한다.
 
-[Javascript Integration Test Page](integration_test.html)
+[Javascript Integration Test Page](https://cdn.rawgit.com/Buzzvil/buzzad-web-integration/master/integration_test.html)
 
 #### 북마크에 추가하는 법
 - 브라우저의 설정에서 bookmarks bar가 언제나 보이도록 설정한다.(다음 사진은 Chrome browser의  예시이다)
