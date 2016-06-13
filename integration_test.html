@@ -45,13 +45,9 @@
     		var test = 'bz_tracking_id=10023_71ffbffd-ccf1-4edf-9c4c';
         	var [domain, params] = url.split('?');
         	if (params == null) {
-        		console.log('params == null');
         		params = test;
-        		console.log(params);
         	} else {
-        		console.log('params != null');
         		params = [params, test].join('&');
-        		console.log(params);
         	}
         	url = [domain, params].join('?');
         	window.open(url,'_blank');
