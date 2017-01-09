@@ -142,8 +142,3 @@ https://t.buzzad.io/action/pb/cpa/default/?bz_tracking_id=10023_71ffbffd-ccf1-4e
 |3.1|2014/12/13|- buzzad.io로 도메인 변경<br>- 부연 설명 추가<br>- 액션 달성전송 Javascript 코드 수정 | 서주은 |
 |3.2|2016/01/21|- 부연 설명 추가<br>- Javascript 연동 테스트용 구글 익스텐션 추가 | 홍서정 |
 |3.3|2016/06/13|- 부연 설명 추가<br>- 연동 테스트용 스크립트 및 페이지 만들기<br>- FAQ 항목 추가<br>- 전체 구조 수정 | 홍서정 |
-  
-### 개요
-- 서비스명: BuzzAd
-- 회사명: (주)버즈빌
-- 담당: 최선웅 매니저 / <ed.choi@buzzvil.com>
