@@ -15,15 +15,13 @@ Javascript 를 이용한 연동과 Server to Server 연동이 있다. 두 가지
 
 #### 광고 포인트 지급 Flow
 
-![CPA integration](Buzzad CPA integration.png)
-
 - BuzzAd의 인벤토리를 통해서 유저가 광고주의 광고로 랜딩하여 들어올 때, BuzzAd 서버에서는 유저의 액션을 트래킹하기 위한 id인 `bz_tracking_id` 를 원래의 랜딩 url에 파라미터로 붙여서 전달한다. 
 
     > 주의 : `bz_tracking_id` 는 광고마다 부여되는 고정된 값이 아니라, 유저의 클릭 때마다 매번 달라지는 값이다.
 
 - Step1 '초기화' 단계 연동을 통해 이 파라미터를 유저의 웹브라우저 내에 광고주 도메인 localStorage에 저장한다.
 - Step2 '액션 달성 전송' 단계의 연동을 통해 액션 완료 시 BuzzAd 서버로 신호를 보낼 때 localStorage에 저장해 둔 `bz_tracking_id`를 꺼내어 같이 전달한다.
-- BuzzAd 서버에서는 전달받은 `bz_trackig_id` 값을 이용해 광고에 참여 완료한 유저 정보를 찾아서 해당 유저에게 포인트를 지급한다.
+- BuzzAd 서버에서는 전달받은 `bz_tracking_id` 값을 이용해 광고에 참여 완료한 유저 정보를 찾아서 해당 유저에게 포인트를 지급한다.
 
 ### Step1 : 초기화
 
@@ -90,7 +88,6 @@ img.src = "//t.buzzad.io/action/pb/cpa/default/pixel.gif" + localStorage.BuzzAd;
 - 브라우저의 설정에서 bookmarks bar가 언제나 보이도록 설정한다.(다음 사진은 Chrome browser의  예시이다)
 ![show_bookmarks_bar](show_bookmarks_bar.png)
 - 링크를 드래그하여 bookmarks bar에 추가한다.
-![add_bookmark](add_bookmark.png)
 
 ## 2. Server to Server 연동 (Javascript 연동시 불필요)
  
@@ -98,9 +95,11 @@ img.src = "//t.buzzad.io/action/pb/cpa/default/pixel.gif" + localStorage.BuzzAd;
 사용자가 특정한 액션을 수행하면 BuzzAd 서버로 액션이 수행 되었음을 알려주어야 한다. 연동은 다음과 같이 수행한다.
  
 1) 요청 방향
+
 광고주 → 매체사
  
 2) HTTP Request method
+
 POST or GET
  
 3) HTTP Request URL
@@ -114,18 +113,19 @@ https://t.buzzad.io/action/pb/cpa/default/
 | `bz_tracking_id` | String | 광고와 유저 트래킹을 위한 아이디. BuzzAd에서 광고와 연결된 URL로 전환시 같이 전달되는 값이다. 광고 웹 사이트는 이 값을 보관하였다가 액션 달성 API호출 시 다시 전달해주어야 한다. |
  
 5) Response
+
 JSON 형식으로 반환
 		
 | Field | Type | Description |
 | --- | --- | --- |
-| `code` | Integer | 처리결과 코드 - 200 : 정상, 9020 : 중복 요청, 그 외 : 에러 |
+| `code` | Integer | 처리결과 코드<br>- 200 : 정상<br>- 9020 : 중복 요청<br>- 그 외 : 에러 |
 | `msg` | String | 처리결과 메세지 |
  
 6) Test bz_tracking_id
+
 bz_tracking_id = 10023_71ffbffd-ccf1-4edf-9c4c
  
-eg)
-https://t.buzzad.io/action/pb/cpa/default/?bz_tracking_id=10023_71ffbffd-ccf1-4edf-9c4c
+eg) https://t.buzzad.io/action/pb/cpa/default/?bz_tracking_id=10023_71ffbffd-ccf1-4edf-9c4c
 
 ## 3. 가이드 변경 이력
  

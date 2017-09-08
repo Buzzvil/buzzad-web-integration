@@ -1,0 +1,57 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<html>
+    <head>
+    	<title>BuzzAd CPA Test Page</title>
+    </head>
+    <body>
+        <h1>BuzzAd CPA Integration Test</h1>
+
+        <h2>テスト方法</h2>
+
+        <h4>1. 下記のリンクをブックマークに保存してください。</h4>
+
+        <a target="_blank" href='javascript:(function(){var a=document.location.search;if(-1==a.search("bz_tracking_id=10023_71ffbffd-ccf1-4edf-9c4c")){if(0==a.length)document.location.search="bz_tracking_id=10023_71ffbffd-ccf1-4edf-9c4c";else{for(var b=document.location.search.substr(1).split("&"),a=0;a<b.length;a++){var c=b[a].split("=");if("bz_tracking_id"==c[0]){c[1]="10023_71ffbffd-ccf1-4edf-9c4c";b[a]=c.join("=");break}}a>=b.length&&(b[b.length]="bz_tracking_id=10023_71ffbffd-ccf1-4edf-9c4c");document.location.search=b.join("&")}alert("\u30C6\u30B9\u30C8\u306E\u305F\u3081\u306B\u30DA\u30FC\u30B8\u3092\u518D\u5EA6\u8AAD\u307F\u8FBC\u307F\u3057\u307E\u3059\u3002\u8AAD\u307F\u8FBC\u307F\u5B8C\u4E86\u5F8C\u3001\u518D\u5EA6\u30D6\u30C3\u30AF\u30DE\u30FC\u30AF\u30DC\u30BF\u30F3\u3092\u30AF\u30EA\u30C3\u30AF\u3057\u30C6\u30B9\u30C8\u3092\u9032\u3081\u3066\u304F\u3060\u3055\u3044\u3002")}else{b=[];for(a=0;a<localStorage.length;a++)b.push(localStorage.key(a));console.log(b);a:{for(a=0;a<b.length;a++)if("BuzzAd"==b[a]){a=!0;break a}a=!1}0==a?alert("[Fail] Step1\u521D\u671F\u5316\u30B9\u30C6\u30C3\u30D7\u306E\u7E4B\u304E\u3053\u307F\u5931\u6557\u3002\u30B9\u30AF\u30EA\u30D7\u30C8\u30B3\u30FC\u30C9\u3092\u305D\u306E\u307E\u307E\u633F\u5165\u3057\u3066\u304F\u3060\u3055\u3044\u3002"):-1!=localStorage.getItem(b).indexOf("10023_71ffbffd-ccf1-4edf-9c4c")?alert("[Success] Step1 \u521D\u671F\u5316\u30B9\u30C6\u30C3\u30D7\u306E\u7E4B\u304E\u3053\u307F\u304C\u6210\u529F\u3057\u307E\u3057\u305F\u3002\u3053\u306E\u30DA\u30FC\u30B8\u3067\u5B9A\u3081\u3089\u308C\u305F\u30A2\u30AF\u30B7\u30E7\u30F3\u3092\u3057\u305F\u3042\u3068\u6210\u529F\u30E1\u30C3\u30BB\u30FC\u30B8\u304C\u8868\u793A\u3055\u308C\u308B\u306E\u304B\u78BA\u8A8D\u3057\u3066\u304F\u3060\u3055\u3044\u3002"):alert("[Fail] Step1\u521D\u671F\u5316\u30B9\u30C6\u30C3\u30D7\u306E\u7E4B\u304E\u3053\u307F\u5931\u6557\u3002\u30B9\u30AF\u30EA\u30D7\u30C8\u30B3\u30FC\u30C9\u3092\u305D\u306E\u307E\u307E\u633F\u5165\u3057\u3066\u304F\u3060\u3055\u3044\u3002")}})();'> Buzzad integration test </a>
+
+        <h4>2. 繋ぎこみ作業用の広告ページURLを下記に入力し、ボタンをクリックするとテスト用のページが開きます。</h4>
+        <h4 style="color:red">
+        	* 必読：最初にもらった広告ページでそのままリダイレクトが起こり、広告ページと実際にコード作業をしたページをURLが同じであるかご確認ください。<br>
+        	URLが異なる場合、
+			<a href="https://github.com/Buzzvil/buzzad-web-integration/blob/master/README_JA.md#faq" target="_blank">Step1 FAQ</a>
+			をご参考ください。
+		</h4>
+
+        <input type="text" name="url" id="url_input" value='広告ページのURLをご入力ください' onfocus="this.value=''" size="35">
+        <input type="button" value="Load Page" onclick="loadUrl()">
+
+        <h4>3. テスト用のページでブックマークをクリックします。成功メッセージが表示されたら、そのページでアクション完了ステップまで進めてください。</h4>
+
+		<h4>4. アクション完了ステップで成功メッセージのAlertが表示されたらStep2 アクション達成送信までテスト完了です。</h4>
+		<h4 style="color:red">
+			* 必読：Alertが表示されるかどうかだけではなく、表示される時点も重要です。決めた段階で表示されているのかご確認ください。
+		</h4>
+
+        <h4>5. 繋ぎこみが終わった旨を弊社の広告担当者にお知らせください。担当者が最終テスト後、成功した場合広告を開始します。</h4>
+        <h4 style="color:red">
+            * 各ステップごとに成功メッセージが表示されない場合は、
+        	<a href="https://github.com/Buzzvil/buzzad-web-integration/blob/master/README_JA.md" target="_blank">繋ぎこみガイド</a>
+        	の各スタップ別FAQを参考にdebuggingしてください<br>
+            * 必ず、Step2 繋ぎこみテストを完了したあと、弊社の担当者に繋ぎこみ完了に関する旨をお知らせしてください。</h4>
+    </body>
+
+    <script type="text/javascript">
+    	function loadUrl() {
+    		var url = document.getElementById('url_input').value;
+    		var test = 'bz_tracking_id=10023_71ffbffd-ccf1-4edf-9c4c';
+        	var [domain, params] = url.split('?');
+        	if (params == null) {
+        		params = test;
+        	} else {
+        		params = [params, test].join('&');
+        	}
+        	url = [domain, params].join('?');
+        	window.open(url,'_blank');
+	        alert("テスト用のページが開きました。該当するページで残りのテストをお願いします。");
+    	}
+    </script>
+</html>
