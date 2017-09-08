@@ -87,7 +87,6 @@ BuzzAdサーバーにアクション達成リクエストが完了されたこ�
 - ブラウザの設定でbookmarks barが常に見えるように設定する。（次の写真は、Chrome browserの例示である）
 ![show_bookmarks_bar](show_bookmarks_bar.png)
 - リンクをドラッグしてbookmarks barに追加します。
-![add_bookmark](add_bookmark.png)
 
 ## 2. Server to Server 繋ぎ込み (Javascript の繋ぎ込み場合は必要なし)
  
