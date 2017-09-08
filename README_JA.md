@@ -108,15 +108,14 @@ https://t.buzzad.io/action/pb/cpa/default/
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `bz_tracking_id` | String | 広告とユーザートラッキングの為のID
-BuzzAdで広告と繋がっているURLで転換時に送られる値。広告webサイトはこの値を保存しておいてアクション達成 API呼び出し時に再び送らなければならない。 |
+| `bz_tracking_id` | String | 広告とユーザートラッキングの為のID。BuzzAdで広告と繋がっているURLで転換時に送られる値。広告webサイトはこの値を保存しておいてアクション達成 API呼び出し時に再び送らなければならない。 |
  
 5) Response
 JSON 形式に返還
         
 | Field | Type | Description |
 | --- | --- | --- |
-| `code` | Integer | 処理結果コード - 200: 正常, 9020: 重複要請, その他: エラー |
+| `code` | Integer | 処理結果コード - 200 : 正常, 9020 : 重複要請, その他 : エラー |
 | `msg` | String | 処理結果メッセージ |
  
 6) Test bz_tracking_id
