@@ -116,7 +116,7 @@ JSON 형식으로 반환
 		
 | Field | Type | Description |
 | --- | --- | --- |
-| `code` | Integer | 처리결과 코드 - 200 : 정상, 9020 : 중복 요청, 그 외 : 에러 |
+| `code` | Integer | 처리결과 코드<br>- 200 : 정상<br>- 9020 : 중복 요청<br>- 그 외 : 에러 |
 | `msg` | String | 처리결과 메세지 |
  
 6) Test bz_tracking_id

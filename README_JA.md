@@ -115,7 +115,7 @@ JSON 形式に返還
         
 | Field | Type | Description |
 | --- | --- | --- |
-| `code` | Integer | 処理結果コード - 200 : 正常, 9020 : 重複要請, その他 : エラー |
+| `code` | Integer | 処理結果コード<br>- 200 : 正常<br>- 9020 : 重複要請<br>- その他 : エラー |
 | `msg` | String | 処理結果メッセージ |
  
 6) Test bz_tracking_id
