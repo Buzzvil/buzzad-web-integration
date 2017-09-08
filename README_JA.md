@@ -1,4 +1,4 @@
-# BuzzAd web繋ぎ込みガイド v3.3
+# BuzzAd web繋ぎ込みガイド
 
 BuzzAd Webの繋ぎこみにはJavascriptを利用した繋ぎこみとServer to Server を利用した繋ぎこみがある。２つの中で１つを選んで繋ぎこみお願い致します。
 
@@ -125,3 +125,9 @@ JSON 形式に返還
 bz_tracking_id = 10023_71ffbffd-ccf1-4edf-9c4c
  
 eg) https://t.buzzad.io/action/pb/cpa/default/?bz_tracking_id=10023_71ffbffd-ccf1-4edf-9c4c
+
+## 3. ガイド履歴
+ 
+| バージョン | 日付 | 内容 | 担当者 |
+| --- | ------ | -------|------|
+|3.4|2017/09/08|- 日本語ガイド追加| Haley Hong |

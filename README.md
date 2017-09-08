@@ -1,4 +1,4 @@
-# BuzzAd 웹 연동 가이드 v3.3
+# BuzzAd 웹 연동 가이드
 
 Javascript 를 이용한 연동과 Server to Server 연동이 있다. 두 가지 방식 중 상황에 맞게 하나를 선택해서 연동 작업을 진행하면 된다.
 
@@ -129,7 +129,6 @@ eg) https://t.buzzad.io/action/pb/cpa/default/?bz_tracking_id=10023_71ffbffd-ccf
 
 ## 3. 가이드 변경 이력
  
-### 변경 이력
 | 버젼 | 변경일자 | 변경내용 | 담당자 |
 | --- | ------ | -------|------|
 |1.0|2013/07/29|-		| 서주은 |
@@ -142,3 +141,4 @@ eg) https://t.buzzad.io/action/pb/cpa/default/?bz_tracking_id=10023_71ffbffd-ccf
 |3.1|2014/12/13|- buzzad.io로 도메인 변경<br>- 부연 설명 추가<br>- 액션 달성전송 Javascript 코드 수정 | 서주은 |
 |3.2|2016/01/21|- 부연 설명 추가<br>- Javascript 연동 테스트용 구글 익스텐션 추가 | 홍서정 |
 |3.3|2016/06/13|- 부연 설명 추가<br>- 연동 테스트용 스크립트 및 페이지 만들기<br>- FAQ 항목 추가<br>- 전체 구조 수정 | 홍서정 |
+|3.4|2017/09/08|- 일본어 가이드 추가 | 홍서정 |
