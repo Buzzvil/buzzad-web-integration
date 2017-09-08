@@ -15,8 +15,6 @@ BuzzAd Webの繋ぎこみにはJavascriptを利用した繋ぎこみとServer to
 
 #### 広告ポイント付与のフロー
 
-![CPA integration](Buzzad CPA integration.png)
-
 - BuzzAdのインベントリを通じてユーザーがクライアントの広告にランディングした際に、BuzzAdサーバではユーザーのアクションをトラッキングするためのidである `bz_tracking_id` を本来のurlにパラメーターとして付けて送る。
 
     > 注意 : `bz_tracking_id` は広告ごとに付与さえる固定された値ではなく、ユーザーがクリックする度に作成できる値である。

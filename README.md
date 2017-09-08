@@ -15,8 +15,6 @@ Javascript 를 이용한 연동과 Server to Server 연동이 있다. 두 가지
 
 #### 광고 포인트 지급 Flow
 
-![CPA integration](Buzzad CPA integration.png)
-
 - BuzzAd의 인벤토리를 통해서 유저가 광고주의 광고로 랜딩하여 들어올 때, BuzzAd 서버에서는 유저의 액션을 트래킹하기 위한 id인 `bz_tracking_id` 를 원래의 랜딩 url에 파라미터로 붙여서 전달한다. 
 
     > 주의 : `bz_tracking_id` 는 광고마다 부여되는 고정된 값이 아니라, 유저의 클릭 때마다 매번 달라지는 값이다.
