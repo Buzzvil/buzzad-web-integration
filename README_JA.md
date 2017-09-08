@@ -95,9 +95,11 @@ BuzzAdサーバーにアクション達成リクエストが完了されたこ�
 ユーザーが特定のアクションをすると BuzzAd サーバーにアクションが起こったことを知らせる。 繋ぎ込みは次のようにする。
  
 1) 要請方向
+
 クライアント → 媒体主
  
 2) HTTP Request method
+
 POST or GET
  
 3) HTTP Request URL
@@ -111,6 +113,7 @@ https://t.buzzad.io/action/pb/cpa/default/
 | `bz_tracking_id` | String | 広告とユーザートラッキングの為のID。BuzzAdで広告と繋がっているURLで転換時に送られる値。広告webサイトはこの値を保存しておいてアクション達成 API呼び出し時に再び送らなければならない。 |
  
 5) Response
+
 JSON 形式に返還
         
 | Field | Type | Description |
@@ -119,7 +122,7 @@ JSON 形式に返還
 | `msg` | String | 処理結果メッセージ |
  
 6) Test bz_tracking_id
+
 bz_tracking_id = 10023_71ffbffd-ccf1-4edf-9c4c
  
-eg)
-https://t.buzzad.io/action/pb/cpa/default/?bz_tracking_id=10023_71ffbffd-ccf1-4edf-9c4c
+eg) https://t.buzzad.io/action/pb/cpa/default/?bz_tracking_id=10023_71ffbffd-ccf1-4edf-9c4c

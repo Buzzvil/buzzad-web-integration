@@ -96,9 +96,11 @@ img.src = "//t.buzzad.io/action/pb/cpa/default/pixel.gif" + localStorage.BuzzAd;
 사용자가 특정한 액션을 수행하면 BuzzAd 서버로 액션이 수행 되었음을 알려주어야 한다. 연동은 다음과 같이 수행한다.
  
 1) 요청 방향
+
 광고주 → 매체사
  
 2) HTTP Request method
+
 POST or GET
  
 3) HTTP Request URL
@@ -112,6 +114,7 @@ https://t.buzzad.io/action/pb/cpa/default/
 | `bz_tracking_id` | String | 광고와 유저 트래킹을 위한 아이디. BuzzAd에서 광고와 연결된 URL로 전환시 같이 전달되는 값이다. 광고 웹 사이트는 이 값을 보관하였다가 액션 달성 API호출 시 다시 전달해주어야 한다. |
  
 5) Response
+
 JSON 형식으로 반환
 		
 | Field | Type | Description |
@@ -120,10 +123,10 @@ JSON 형식으로 반환
 | `msg` | String | 처리결과 메세지 |
  
 6) Test bz_tracking_id
+
 bz_tracking_id = 10023_71ffbffd-ccf1-4edf-9c4c
  
-eg)
-https://t.buzzad.io/action/pb/cpa/default/?bz_tracking_id=10023_71ffbffd-ccf1-4edf-9c4c
+eg) https://t.buzzad.io/action/pb/cpa/default/?bz_tracking_id=10023_71ffbffd-ccf1-4edf-9c4c
 
 ## 3. 가이드 변경 이력
  
