@@ -60,7 +60,7 @@ BuzzAdを通じランディングされるクライアントの最初のペー�
     //*必要な場合、ここでリダイレクトする*
 };
 if (localStorage.BuzzAd == null) { localStorage.BuzzAd = ""; }
-img.src = "//t.buzzad.io/action/pb/cpa/default/pixel.gif" + localStorage.BuzzAd; }) (new Image())
+img.src = "//track.buzzvil.com/action/pb/cpa/default/pixel.gif" + localStorage.BuzzAd; }) (new Image())
 </script>
 ```
 #### 注意！アクション達成後、すぐに他のページへリダイレクトする場合
@@ -103,7 +103,7 @@ POST or GET
  
 3) HTTP Request URL
 
-https://t.buzzad.io/action/pb/cpa/default/
+https://track.buzzvil.com/action/pb/cpa/default/
 
 4) HTTP Request parameters
 
@@ -124,10 +124,11 @@ JSON 形式に返還
 
 bz_tracking_id = 10023_71ffbffd-ccf1-4edf-9c4c
  
-eg) https://t.buzzad.io/action/pb/cpa/default/?bz_tracking_id=10023_71ffbffd-ccf1-4edf-9c4c
+eg) https://track.buzzvil.com/action/pb/cpa/default/?bz_tracking_id=10023_71ffbffd-ccf1-4edf-9c4c
 
 ## 3. ガイド履歴
  
 | バージョン | 日付 | 内容 | 担当者 |
 | --- | ------ | -------|------|
 |3.4|2017/09/08|- 日本語ガイド追加| Haley Hong |
+|3.5|2017/10/13|- t.buzzad.io - > track.buzzvil.com ドメインの変更| Mir Lim |
