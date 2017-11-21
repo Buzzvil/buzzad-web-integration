@@ -60,7 +60,7 @@ BuzzAd를 통해 랜딩되는 광고의 첫 페이지에서 아래의 자바스�
     //*필요시 여기서 리다이렉트 수행*
 };
 if (localStorage.BuzzAd == null) { localStorage.BuzzAd = ""; }
-img.src = "//t.buzzad.io/action/pb/cpa/default/pixel.gif" + localStorage.BuzzAd; }) (new Image())
+img.src = "//track.buzzvil.com/action/pb/cpa/default/pixel.gif" + localStorage.BuzzAd; }) (new Image())
 </script>
 ```
 #### 주의! 액션 달성 후 리다이렉트를 수행하는 경우
@@ -106,7 +106,7 @@ POST or GET
  
 3) HTTP Request URL
 
-https://t.buzzad.io/action/pb/cpa/default/
+https://track.buzzvil.com/action/pb/cpa/default/
 
 4) HTTP Request parameters
 
@@ -127,7 +127,7 @@ JSON 형식으로 반환
 
 bz_tracking_id = 10023_71ffbffd-ccf1-4edf-9c4c
  
-eg) https://t.buzzad.io/action/pb/cpa/default/?bz_tracking_id=10023_71ffbffd-ccf1-4edf-9c4c
+eg) https://track.buzzvil.com/action/pb/cpa/default/?bz_tracking_id=10023_71ffbffd-ccf1-4edf-9c4c
 
 ## 3. 가이드 변경 이력
  
@@ -144,3 +144,4 @@ eg) https://t.buzzad.io/action/pb/cpa/default/?bz_tracking_id=10023_71ffbffd-ccf
 |3.2|2016/01/21|- 부연 설명 추가<br>- Javascript 연동 테스트용 구글 익스텐션 추가 | 홍서정 |
 |3.3|2016/06/13|- 부연 설명 추가<br>- 연동 테스트용 스크립트 및 페이지 만들기<br>- FAQ 항목 추가<br>- 전체 구조 수정 | 홍서정 |
 |3.4|2017/09/08|- 일본어 가이드 추가 | 홍서정 |
+|3.5|2017/10/13|- t.buzzad.io -> track.buzzvil.com 도메인 변경 | 임미르 |
