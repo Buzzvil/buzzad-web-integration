@@ -22,6 +22,7 @@ Javascript 를 이용한 연동과 Server to Server 연동이 있다. 두 가지
 - Step1 '초기화' 단계 연동을 통해 이 파라미터를 유저의 웹브라우저 내에 광고주 도메인 localStorage에 저장한다.
 - Step2 '액션 달성 전송' 단계의 연동을 통해 액션 완료 시 BuzzAd 서버로 신호를 보낼 때 localStorage에 저장해 둔 `bz_tracking_id`를 꺼내어 같이 전달한다.
 - BuzzAd 서버에서는 전달받은 `bz_tracking_id` 값을 이용해 광고에 참여 완료한 유저 정보를 찾아서 해당 유저에게 포인트를 지급한다.
+![CTA Flow](BA_CTA_flow.png)
 
 ### Step1 : 초기화
 
