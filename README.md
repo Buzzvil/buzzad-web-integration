@@ -11,17 +11,18 @@ Javascript 를 이용한 연동과 Server to Server 연동이 있다. 두 가지
 - Javascript 연동은 localStorage 를 이용하기 때문에 랜딩 페이지와 액션 완료 페이지의 도메인이 반드시 동일해야 한다. 그렇지 않을 경우, Server to Server 연동을 진행해야 한다.
 - 반드시 제공되는 연동 테스트까지 완료한 후에 버즈빌 담당자에게 연동 완료 회신을 해야 한다.
 - 연동 테스트가 실패했을 경우, 실패한 단계의 FAQ를 참고한다.
-- 연동 테스트는 Step1을 성공한 후에 Step2를 진행한다. 
+- 연동 테스트는 Step1을 성공한 후에 Step2를 진행한다.
 
 #### 광고 포인트 지급 Flow
 
-- BuzzAd의 인벤토리를 통해서 유저가 광고주의 광고로 랜딩하여 들어올 때, BuzzAd 서버에서는 유저의 액션을 트래킹하기 위한 id인 `bz_tracking_id` 를 원래의 랜딩 url에 파라미터로 붙여서 전달한다. 
+- BuzzAd의 인벤토리를 통해서 유저가 광고주의 광고로 랜딩하여 들어올 때, BuzzAd 서버에서는 유저의 액션을 트래킹하기 위한 id인 `bz_tracking_id` 를 원래의 랜딩 url에 파라미터로 붙여서 전달한다.
 
     > 주의 : `bz_tracking_id` 는 광고마다 부여되는 고정된 값이 아니라, 유저의 클릭 때마다 매번 달라지는 값이다.
 
 - Step1 '초기화' 단계 연동을 통해 이 파라미터를 유저의 웹브라우저 내에 광고주 도메인 localStorage에 저장한다.
 - Step2 '액션 달성 전송' 단계의 연동을 통해 액션 완료 시 BuzzAd 서버로 신호를 보낼 때 localStorage에 저장해 둔 `bz_tracking_id`를 꺼내어 같이 전달한다.
 - BuzzAd 서버에서는 전달받은 `bz_tracking_id` 값을 이용해 광고에 참여 완료한 유저 정보를 찾아서 해당 유저에게 포인트를 지급한다.
+![CTA Flow](BA_CTA_flow.png)
 
 ### Step1 : 초기화
 
@@ -37,16 +38,16 @@ BuzzAd를 통해 랜딩되는 광고의 첫 페이지에서 아래의 자바스�
 
 #### FAQ
 - Q. 코드에 'test' 라는 단어가 있는 것으로 봐서 테스트용 예시 코드 같은데, 연동할 때 변경해서 사용해야 하나요?
-    
+
     > 테스트용 예시 코드가 아니라 정규표현식 중 하나입니다. 스크립트 전체를 그대로 사용해 주세요.
 
 - Q. 분명히 초기화 스크립트를 확실히 넣었고, 스크립트가 실행되는 것 까지 확인하였는데 주어진 테스트를 진행하면 Step1 연동 실패라고 합니다.
-    
+
     > 코드 작업을 진행하신 페이지의 URL이 광고용으로 전달받은 URL과 동일한지 다시 확인해 주세요.<br>광고용으로 전달 받은 랜딩 페이지에서 곧바로 리다이렉트가 일어날 경우 의도치 않게 전달받은 URL이 아닌 다른 페이지에서 코드 작업을 진행하실 가능성이 있습니다.<br>`bz_tracking_id` 는 첫 랜딩 페이지에만 붙어서 전달되기 때문에 주어진 스크립트 코드는 반드시 랜딩 페이지에서 실행되어야 하며, 그렇지 않을 경우 트래킹 아이디 자체가 아예 생성되지 않은 것 처럼 보여서 연동이 실패하였다고 뜰 수 있습니다.<br>만일 이 둘이 다를 경우, 처음에 전달받은 URL 페이지에서 다시 코드 작업을 하시거나 광고에 등록될 URL을 변경하도록 버즈빌 광고 담당자에게 알려주세요.
 
 ### Step2 : 액션 달성 전송
 
-광고에서 정의된 액션 달성시(회원가입, 이벤트 참여 등) 아래의 자바스크립트 코드를 실행한다. 
+광고에서 정의된 액션 달성시(회원가입, 이벤트 참여 등) 아래의 자바스크립트 코드를 실행한다.
 
 > 아래의 코드는 앞서 저장한 BuzzAd 라는 이름의 변수를 그대로 불러 와서 서버로 전송한다. 이 값을 통해 유저가 광고를 통해 참여하고 액션을 완료했음을 BuzzAd 서버로 전달하여 적립금을 지급할 수 있게 된다.
 
@@ -70,7 +71,7 @@ img.src = "//track.buzzvil.com/action/pb/cpa/default/pixel.gif" + localStorage.B
 
 #### FAQ
 - Q. Step2 액션 달성 전송 부분의 코드에서 alert 를 보내도록 되어 있는 것 같은데, 일반 유저들에게는 이 alert를 보여주고 싶지 않습니다. 코드를 수정해야 하나요?
-    
+
     > 해당 alert는 테스트를 하실 때만 보이게 되어 있습니다. 코드를 수정하지 않으셔도 일반 유저들에게는 나가지 않습니다.
 
 - Q. 액션 완료 시 삽입한 코드가 확실히 실행되는 것을 확인했는데 테스트 결과 아무런 alert 가 발생하지 않아서 연동이 실패한 것 같습니다.
@@ -92,18 +93,18 @@ img.src = "//track.buzzvil.com/action/pb/cpa/default/pixel.gif" + localStorage.B
 - 링크를 드래그하여 bookmarks bar에 추가한다.
 
 ## 2. Server to Server 연동 (Javascript 연동시 불필요)
- 
+
 ### 액션 달성 API
 사용자가 특정한 액션을 수행하면 BuzzAd 서버로 액션이 수행 되었음을 알려주어야 한다. 연동은 다음과 같이 수행한다.
- 
+
 1) 요청 방향
 
 광고주 → 매체사
- 
+
 2) HTTP Request method
 
 POST or GET
- 
+
 3) HTTP Request URL
 
 https://track.buzzvil.com/action/pb/cpa/default/
@@ -113,24 +114,24 @@ https://track.buzzvil.com/action/pb/cpa/default/
 | Field | Type | Description |
 | --- | --- | --- |
 | `bz_tracking_id` | String | 광고와 유저 트래킹을 위한 아이디. BuzzAd에서 광고와 연결된 URL로 전환시 같이 전달되는 값이다. 광고 웹 사이트는 이 값을 보관하였다가 액션 달성 API호출 시 다시 전달해주어야 한다. |
- 
+
 5) Response
 
 JSON 형식으로 반환
-		
+
 | Field | Type | Description |
 | --- | --- | --- |
 | `code` | Integer | 처리결과 코드<br>- 200 : 정상<br>- 9020 : 중복 요청<br>- 그 외 : 에러 |
 | `msg` | String | 처리결과 메세지 |
- 
+
 6) Test bz_tracking_id
 
 bz_tracking_id = 10023_71ffbffd-ccf1-4edf-9c4c
- 
+
 eg) https://track.buzzvil.com/action/pb/cpa/default/?bz_tracking_id=10023_71ffbffd-ccf1-4edf-9c4c
 
 ## 3. 가이드 변경 이력
- 
+
 | 버젼 | 변경일자 | 변경내용 | 담당자 |
 | --- | ------ | -------|------|
 |1.0|2013/07/29|-		| 서주은 |
