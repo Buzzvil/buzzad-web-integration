@@ -131,6 +131,8 @@ bz_tracking_id = 10023_71ffbffd-ccf1-4edf-9c4c
  
 eg) https://track.buzzvil.com/action/pb/cpa/default/?bz_tracking_id=10023_71ffbffd-ccf1-4edf-9c4c
 
+> 연동 과정에서 기술적인 문제가 발생하는 경우 [기술 지원팀](mailto:tech-support@buzzvil.com)으로 문의주시기 바랍니다.
+
 ## 3. 가이드 변경 이력
  
 | 버젼 | 변경일자 | 변경내용 | 담당자 |
@@ -147,3 +149,5 @@ eg) https://track.buzzvil.com/action/pb/cpa/default/?bz_tracking_id=10023_71ffbf
 |3.3|2016/06/13|- 부연 설명 추가<br>- 연동 테스트용 스크립트 및 페이지 만들기<br>- FAQ 항목 추가<br>- 전체 구조 수정 | 홍서정 |
 |3.4|2017/09/08|- 일본어 가이드 추가 | 홍서정 |
 |3.5|2017/10/13|- t.buzzad.io -> track.buzzvil.com 도메인 변경 | 임미르 |
+
+
