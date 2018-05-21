@@ -85,7 +85,7 @@ Redirecting code MUST be inserted after the action completion signal is sent to 
 
 In the link below, please add `Buzzad integration test` link to bookmark and proceed with the test. Details on the test procedure is explained in the linked page.
 
-[Javascript Integration Test Page](https://cdn.rawgit.com/Buzzvil/buzzad-web-integration/master/integration_test_EN.html)
+[Javascript Integration Test Page](https://cdn.rawgit.com/Buzzvil/buzzad-web-integration/master/integration_test_en.html)
 
 #### How to Add a Link to Bookmark
 - In the browser preferences, please set the bookmarks bar to always appear. (The following image is the example of Chrome browser.)![show_bookmarks_bar](show_bookmarks_bar.png)
