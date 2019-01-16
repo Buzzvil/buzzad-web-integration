@@ -90,13 +90,13 @@ img.src = "//track.buzzvil.com/action/pb/cpa/default/pixel.gif" + localStorage.B
 
 #### 북마크에 추가하는 법
 - 링크를 우클릭하여 링크를 복사한다 (다음 사진은 Chrome browser의 예시이다).
+
 ![right_click_to_copy](right_click_to_copy.png)
 
 - 북마크 관리자를 열어 링크를 북마크로 추가한다.
+
 ![bookmark_manager](bookmark_manager.png)
-
 ![add_bookmark](add_bookmark.png)
-
 ![save_bookmark](save_bookmark.png)
 
 
