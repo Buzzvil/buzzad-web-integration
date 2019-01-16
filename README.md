@@ -89,9 +89,15 @@ img.src = "//track.buzzvil.com/action/pb/cpa/default/pixel.gif" + localStorage.B
 [Javascript Integration Test Page](https://cdn.rawgit.com/Buzzvil/buzzad-web-integration/master/integration_test.html)
 
 #### 북마크에 추가하는 법
-- 브라우저의 설정에서 bookmarks bar가 언제나 보이도록 설정한다.(다음 사진은 Chrome browser의  예시이다)
-![show_bookmarks_bar](show_bookmarks_bar.png)
-- 링크를 드래그하여 bookmarks bar에 추가한다.
+- 링크를 우클릭하여 링크를 복사한다 (다음 사진은 Chrome browser의 예시이다).
+![right_click_to_copy](right_click_to_copy.png)
+- 북마크 관리자를 열어 링크를 북마크로 추가한다.
+![bookmark_manager](bookmark_manager.png)
+![add_bookmark](add_bookmark.png)
+![save_bookmark](save_bookmark.png)
+
+
+
 
 ## 2. Server to Server 연동 (Javascript 연동시 불필요)
  
