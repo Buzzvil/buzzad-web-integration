@@ -1,0 +1,66 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<html>
+    <head>
+    	<title>BuzzAd CPA Test Page</title>
+    </head>
+    <body>
+        <h1>BuzzAd CPA Integration Test</h1>
+
+        <h2>How to Test</h2>
+
+        <h4>1. Drag the following link to Bookmark Bar and save.</h4>
+
+        <a target="_blank" href='javascript:(function(){const BZ_TRACKKING_ID_KEY="bz_tracking_id";const BZ_TRACKKING_ID_VAL="10023_71ffbffd-ccf1-4edf-9c4c";const BZ_TRACKKING_ID_KEY_VAL=`${BZ_TRACKKING_ID_KEY}=${BZ_TRACKKING_ID_VAL}`;var query=document.location.search;if(query.search(BZ_TRACKKING_ID_KEY_VAL)==-1){if (query.length!=0) {query+="&";}document.location.search=query+BZ_TRACKKING_ID_KEY_VAL;alert("The page will be reloaded for testing. If the page is reloaded, press the bookmark button again and move on to the next step.");} else {tracking_id=localStorage.getItem("BuzzAd");if (!tracking_id || tracking_id.indexOf(BZ_TRACKKING_ID_VAL)==-1) {alert("[Fail] Step1 Initialization step is not integrated properly. Please insert the javascript code without any editing.");} else {alert("[Success] Step1 Initialization step is successfully integrated! Please move on to the next action and check if success message appears when you complete the action.");}}})();'> Buzzad integration test </a>
+
+        <h4>2. Enter the ad landing page URL BuzzAd is integrated in the box below and press the button. A test page will open in a new window.</h4>
+        <h4 style="color:red">
+        	* Important : Please check if the landing page is the one which integration code is inserted in; it might immediately redirect to another page, so the page you worked on might not be the same as the landing page.<br>
+        </h4>
+        <h4>
+          <div style="background-color:#eeee; margin:10px; padding:10px">
+            <span style="color:red">Especially, please check if the landing page URL changes automatically in mobile environment.</span><br>
+              - Chrome developer tools(Mac: alt+cmd+i / Window: F12) > <br>
+              - Toggle Device Tool bar(Mac: cmd+shift+M / Windows: Ctrl+shift+M) > <br>
+              - In the Emulated Devices option on the top bar, select Galaxy S5 instead of Responsible > <br>
+              - Refresh the page and check mobile url in the address bar.<br>
+        </div>
+        </h4>
+        <h4>
+        	If the URLs are unidentical, please refer to 
+			<a href="https://github.com/Buzzvil/buzzad-web-integration/blob/master/README_EN.md#faq" target="_blank">Step1 FAQ</a>
+            for detailed explanation.
+		</h4>
+
+        <input type="text" name="url" id="url_input" value='Please enter ad landing page URL' onfocus="this.value=''" size="35">
+        <input type="button" value="Load Page" onclick="loadUrl()">
+
+        <h4>3. Click bookmark in the test page. If success message appears, please proceed to the action completion stage.</h4>
+
+		<h4 >4. If a success alert appears in the action completion stage, test until Step2 is completed!</h4>
+		<h4 style="color:red">
+			* Important : Please check the moment the alert appears as well. Double check if the alert appears on the stage the ad intended.
+		</h4>
+
+        <h4>5. Please notify the Buzzvil manager that integration is completed. The manager will go through final test and execute the ad if successfully tested.</h4>
+        <h4 style="color:red">* If the success alert does not appear in either stage, debug according to the FAQ of each stage in the <a href="https://github.com/Buzzvil/buzzad-web-integration/blob/master/README_EN.md" target="_blank">integration guide</a>. </h4>
+        <h4 style="color:red">* Please let the Buzzvil manager know after completing Step2 integration test.</h4>
+
+    </body>
+
+    <script type="text/javascript">
+    	function loadUrl() {
+    		var url = document.getElementById('url_input').value;
+    		var test = 'bz_tracking_id=10023_71ffbffd-ccf1-4edf-9c4c';
+        	var [domain, params] = url.split('?');
+        	if (params == null) {
+        		params = test;
+        	} else {
+        		params = [params, test].join('&');
+        	}
+        	url = [domain, params].join('?');
+        	window.open(url,'_blank');
+	        alert("A new test page is opened. Please proceed with the remaining steps on the new page.");
+    	}
+    </script>
+</html>
