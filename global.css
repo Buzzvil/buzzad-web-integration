@@ -6,11 +6,14 @@ body {
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
-    line-height: 145%;
+    line-height: 16px;
 }
 
 .info-box {
   border-left: solid #2C5CC4 9px;
-  padding: 8px;
+  padding: 0 8px;
   background-color: #EBEBEB;
+  white-space: pre-line;
+  word-break: break-word;
+  line-height: 20px;
 }
