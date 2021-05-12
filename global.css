@@ -8,3 +8,9 @@ body {
     font-size: 14px;
     line-height: 145%;
 }
+
+.info-box {
+  border-left: solid #2C5CC4 9px;
+  padding: 8px;
+  background-color: #EBEBEB;
+}
