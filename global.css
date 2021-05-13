@@ -2,12 +2,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
 
 body {
+    padding: 1.5rem 2%;
+    max-width: 1019px;
+    min-width: 400px;
+    width: 95%;
     font-family: "Roboto", "Noto Sans KR", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 110%;
 }
+
+section {
+  margin-bottom: 3rem;
+}
+
+header {
+  margin-bottom: 3.5rem;
+}
+
 
 input {
   margin: 15px 0;
