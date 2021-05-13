@@ -19,6 +19,16 @@ input[type=text] {
   width: 50%;
 }
 
+img {
+  border: solid #888 1px;
+}
+
+figcaption {
+  text-align: center;
+  color: #424242;
+  font-size: 0.8rem;
+}
+
 .info-box {
   border-left: solid #2C5CC4 9px;
   padding: 0 8px;
@@ -26,4 +36,14 @@ input[type=text] {
   white-space: pre-line;
   word-break: break-word;
   line-height: 20px;
+}
+
+.img-wrapper {
+  margin: 1rem;
+  max-width: 445px;
+  width: 80%;
+}
+
+.img-wrapper > img {
+  width: 100%;
 }
