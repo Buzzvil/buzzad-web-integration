@@ -21,7 +21,6 @@ header {
   margin-bottom: 3.5rem;
 }
 
-
 input {
   margin: 15px 0;
   border: solid #000 1px;
@@ -40,6 +39,10 @@ figcaption {
   text-align: center;
   color: #424242;
   font-size: 0.8rem;
+}
+
+a {
+  color: #2C5CC4;
 }
 
 .info-box {
