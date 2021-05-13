@@ -63,3 +63,7 @@ a {
 .img-wrapper > img {
   width: 100%;
 }
+
+.highlight {
+  color: #E05241;
+}
