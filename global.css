@@ -11,6 +11,8 @@ body {
 
 input {
   margin: 15px 0;
+  border: solid #000 1px;
+  padding: 2px 7px;
 }
 
 input[type=text] {
