@@ -9,6 +9,14 @@ body {
     line-height: 16px;
 }
 
+input {
+  margin: 15px 0;
+}
+
+input[type=text] {
+  width: 50%;
+}
+
 .info-box {
   border-left: solid #2C5CC4 9px;
   padding: 0 8px;
