@@ -50,12 +50,8 @@ figcaption {
   font-size: 0.8rem;
 }
 
-a {
-  color: #2C5CC4;
-}
-
 .info-box {
-  border-left: solid #2C5CC4 9px;
+  border-left: solid #F44336 9px;
   padding: 0 8px;
   background-color: #EBEBEB;
   font-size: 0.8rem;
@@ -73,6 +69,10 @@ a {
   width: 100%;
 }
 
+a {
+  color: #C3362B;
+}
+
 .highlight {
-  color: #E05241;
+  color: #C3362B;
 }
