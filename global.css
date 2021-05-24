@@ -42,6 +42,14 @@ input[type=text] {
   width: 50%;
 }
 
+input[type=button] {
+  padding: 8px 16px;
+  border: none;
+  background-color: #F44336;
+  color: #FFF;
+  font-weight: 700;
+}
+
 img {
   border: solid #888 1px;
 }
