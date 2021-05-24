@@ -1,23 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&family=Roboto:wght@100;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
 
+html {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 120%;
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  font-style: normal;
+}
+
 body {
     padding: 1.5rem 2%;
     max-width: 1019px;
     min-width: 400px;
     width: 95%;
-    font-family: "Roboto", "Noto Sans KR", sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 110%;
 }
 
-section {
-  margin-bottom: 3rem;
+h1 {
+  font-size: 1.7rem;
 }
 
 header {
+  margin-bottom: 3.5rem;
+  font-size: 1.1rem;
+}
+
+section {
   margin-bottom: 3.5rem;
 }
 
@@ -25,6 +33,7 @@ input {
   margin: 15px 0;
   border: solid #000 1px;
   padding: 2px 7px;
+  font-size: 0.8rem;
 }
 
 input[type=text] {
@@ -49,9 +58,9 @@ a {
   border-left: solid #2C5CC4 9px;
   padding: 0 8px;
   background-color: #EBEBEB;
+  font-size: 0.8rem;
   white-space: pre-line;
   word-break: break-word;
-  line-height: 20px;
 }
 
 .img-wrapper {
