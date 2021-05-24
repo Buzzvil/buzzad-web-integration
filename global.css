@@ -55,7 +55,6 @@ img {
 }
 
 figcaption {
-  text-align: center;
   color: #424242;
   font-size: 0.8rem;
 }
@@ -70,7 +69,7 @@ figcaption {
 }
 
 .img-wrapper {
-  margin: 1rem;
+  margin: 1rem 0;
   max-width: 445px;
   width: 80%;
 }
