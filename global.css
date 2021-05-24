@@ -32,7 +32,9 @@ section {
 input {
   margin: 15px 0;
   border: solid #000 1px;
+  border-radius: 4px;
   padding: 2px 7px;
+  height: 2rem;
   font-size: 0.8rem;
 }
 
