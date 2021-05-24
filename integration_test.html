@@ -3,12 +3,12 @@
 <html>
     <head>
         <link rel="stylesheet" href="global.css">
-    	<title>BuzzAd CPA Test Page</title>
+    	<title>BuzzAd CPA Integration Test</title>
     </head>
     <body>
         <header>
             <h1>BuzzAd CPA Integration Test</h1>
-            <p><strong>Web 연동 테스트 방법</strong> : 다음 안내를 따라 테스트를 <strong>모두 완료</strong>해주세요.</p>
+            <p><strong>웹 연동 테스트 방법</strong> : 다음 안내를 따라 테스트를 <strong>모두 완료</strong>해주세요.</p>
         </header>
 
         <section>
@@ -18,7 +18,7 @@
         </section>
 
         <section>
-            <p>2. 초기화 스크립트를 삽입한 광고 페이지 URL을 아래에 입력 -  ‘테스트 하기' 클릭 - 아래의 메시지와 함께 <strong>테스트용 페이지</strong>가 새 창에서 열림</p>
+            <p>2. 초기화 스크립트를 삽입한 <strong>광고 페이지 URL</strong>을 아래에 입력 -  ‘테스트 하기' 클릭 - 아래의 메시지와 함께 <strong>테스트용 페이지</strong>가 새 창에서 열림</p>
             
             <input type="text" name="url" id="url_input" placeholder='광고 페이지 URL을 입력하세요' onfocus="this.value=''" size="35">
             <input type="button" value="테스트 하기" onclick="loadUrl()">
@@ -29,15 +29,15 @@
             </div>
 
             <div class="info-box">
-                * 필독 : <strong>위에서 입력한, 초기화 스크립트가 삽입된 URL</strong>이 <strong>전달받은 광고 페이지URL</strong>과 <strong>달라지진 않았는지 반드시 확인</strong>해주세요.
+                * 필독 : <strong>*필독: 위에서 입력한 초기화 스크립트가 삽입된 페이지 URL이 전달받은 URL과 달라지지 않았는지 반드시 확인해주세요.</strong>
                 <a href="https://buzzvil.atlassian.net/wiki/spaces/BDG/pages/1950285893/2.1.+CPA+Web+-+JavaScript#Step3.-Javascript-%EC%9B%B9-%EC%97%B0%EB%8F%99-%ED%85%8C%EC%8A%A4%ED%8A%B8" target="_blank">모바일 환경에서 URL이 변경되는지 확인하기</a>
-                <a href="https://buzzvil.atlassian.net/wiki/spaces/BDG/pages/1950285893/2.1.+CPA+Web+-+JavaScript#FAQ" target="_blank">URL이 서로 다를 경우, Step1 FAQ에서 해당 항목 확인하기</a>
+                <a href="https://buzzvil.atlassian.net/wiki/spaces/BDG/pages/1950285893/2.1.+CPA+Web+-+JavaScript#FAQ" target="_blank">URL이 서로 다를 경우, 연동 가이드 FAQ에서 해당 항목 확인하기</a>
     
             </div>
         </section>
 
         <section>
-            <p>3. <strong>열려진 새창에서, 1번의 북마크를 클릭</strong></p>
+            <p>3. 열려진 새창에서, <strong>1번의 북마크를 클릭</strong> - 다음 성공 메세지가 뜨면 <strong>그 페이지에서 4번 진행</strong></p>
     
             <div class="img-wrapper">
                 <img src="./3.png" />
@@ -46,21 +46,21 @@
         </section>
 
         <section>
-            <p >4. <strong>정해진 액션</strong>(예: 회원가입 완료, 상담 신청 완료 등)을 <strong>완료</strong> : 성공 메세지를 담은 Alert 가 뜨면 테스트 완료</p>
+            <p >4. <strong>정해진 액션</strong>(예: 회원가입 완료, 상담 신청 완료 등)을 <strong>완료되면 : 다음 성공 메세지가 뜨면 테스트 완료</strong></p>
             
             <div class="img-wrapper">
                 <img src="./4.png" />
-                <figcaption>성공 메세지 Alert이 뜨면 테스트 완료</figcaption>
+                <figcaption>성공 메세지가 뜨면 테스트 완료</figcaption>
             </div>
 
             <div class="info-box">
-                * 필독 : Alert 가 발생하는지 여부 뿐만 아니라 <strong>발생하는 시점</strong> 또한 중요합니다. <strong>정확한</strong> 액션 완료 단계에서 성공 메시지가 뜨는지 <strong>꼭</strong> 확인해주세요.
+                * 필독 : 성공 메세지가 뜨는지 여부 뿐만 아니라 <strong>발생하는 시점</strong> 또한 중요합니다. <strong>정확한</strong> 액션 완료 단계에서 성공 메시지가 뜨는지 <strong>꼭</strong> 확인해주세요.
     
             </div>
         </section>
         
         <section>
-            <p>5. 연동이 완료되었음을 버즈빌 광고 담당자에게 알려주세요. 담당자가 최종 테스트를 한 후 성공 시 광고를 집행합니다.</p>
+            <p>5. 연동이 완료되었음을 버즈빌 <strong>광고 담당자에게 알려주세요</strong>. 담당자가 최종 테스트를 한 후 성공 시 광고를 집행합니다.</p>
 
             <div class="info-box">
                 * 각 단계 별로 성공 메세지가 뜨지 않는다면, <a href="https://buzzvil.atlassian.net/wiki/spaces/BDG/pages/1950285893/2.1.+CPA+Web+-+JavaScript#FAQ" target="_blank"><strong>연동 가이드의 FAQ</strong></a>와 <strong>온보딩 체크리스트</strong>를 참조하여 디버깅 하세요.
