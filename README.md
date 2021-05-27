@@ -1,3 +1,11 @@
-연동문서가 새로운 페이지로 이전되었습니다.
+# buzzad-web-integration
 
-[버즈빌 개발 가이드 문서](https://buzzvil.atlassian.net/wiki/spaces/BDG/pages/405012616/2.+CPA+Web)를 확인해주세요.
+- 한국어 ver: https://buzzvil.github.io/buzzad-web-integration/
+- 일어 ver: https://buzzvil.github.io/buzzad-web-integration/integration_test_ja
+- 영어 ver: https://buzzvil.github.io/buzzad-web-integration/integration_test_en
+
+## publish pages
+1. Make your feature branch.
+2. Work on your feature branch.
+3. Merge your feature branch into the master branch.
+4. Done!
