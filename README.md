@@ -5,5 +5,7 @@
 - 영어 ver: https://buzzvil.github.io/buzzad-web-integration/integration_test_en
 
 ## publish pages
-1. push your code to master branch
-2. done!
+1. Make your feature branch.
+2. Work on your feature branch.
+3. Merge your feature branch into the master branch.
+4. Done!
